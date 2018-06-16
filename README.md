@@ -25,7 +25,7 @@ Or by defining a service to register. Allowing your validator to take dependenci
 ```csharp
 public void ConfigureServices(IServiceCollection services)
 {
-    services.AddAuthorization()
+    services.AddAuthentication(BasicAuthenticationDefaults.AuthenticationScheme)
         .AddBasicAuthentication<DatabaseBasicCredentialVerifier>();
 }
 
